@@ -1,7 +1,13 @@
 package com.example.demo.service;
 
-import java.util.Map;
+import com.example.demo.dto.requestDto.CreateUserRequest;
+import com.example.demo.dto.responseDto.UserResponse;
+
+import java.util.List;
+
 
 public interface UserService {
-    Map<String, Object> register();
+    UserResponse createUser(CreateUserRequest request);
+
+    List<UserResponse> getAllUsers();
 }
